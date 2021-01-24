@@ -1,0 +1,26 @@
+{
+  "name": "intNode_Exp_BizTime",
+  "version": "1.0.0",
+  "description": "Springboard Section 35 Exercises",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petitepirate/intNode_Exp_BizTime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petitepirate/intNode_Exp_BizTime/issues"
+  },
+  "homepage": "https://github.com/petitepirate/intNode_Exp_BizTime#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "slugify": "^1.4.6"
+  }
+}
