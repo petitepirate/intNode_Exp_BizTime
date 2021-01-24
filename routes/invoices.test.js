@@ -39,8 +39,8 @@ describe("GET /invoices", function() {
     expect(response.statusCode).toEqual(200);
     expect(response.body).toEqual({
       invoices: [{
-        comp_code: testInvoice.comp_code,
-        id: testInvoice.id
+                id: testInvoice.id,
+                comp_code: testInvoice.comp_code
       }]
     });
   });

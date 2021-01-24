@@ -39,18 +39,18 @@ describe("GET /companies", function() {
   });
 });
 
-// describe("POST /companies", function() {
-//   test("Adds a new company", async function() {
-//     const newCompany = {
-//       code: 'new-company',
-//       name: 'New Company',
-//       description: 'New Description'
-//     };
-//     const response = await request(app).post("/companies").send(newCompany);
-//     expect(response.statusCode).toEqual(201);
-//     expect(response.body).toEqual({ company: newCompany });
-//   });
-// });
+describe("POST /companies", function() {
+  test("Adds a new company", async function() {
+    const newCompany = {
+      code: 'new-company',
+      name: 'New Company',
+      description: 'New Description'
+    };
+    const response = await request(app).post("/companies").send(newCompany);
+    expect(response.statusCode).toEqual(201);
+    expect(response.body).toEqual({ company: newCompany });
+  });
+});
 
 describe("GET /companies/:code", function() {
   test("Gets a single company", async function() {
@@ -71,23 +71,23 @@ describe("GET /companies/:code", function() {
   });
 });
 
-// describe("PUT /companies/:code", function() {
-//   test("Edits a company", async function() {
-//     const editedCompany = {
-//       code: 'testco',
-//       name: 'Edited Name',
-//       description: 'Edited Description'
-//     };
-//     const response = await request(app).put(`/companies/${editedCompany.code}`).send(editedCompany);
-//     expect(response.statusCode).toEqual(200);
-//     expect(response.body).toEqual({ company: editedCompany });
-//   });
+describe("PUT /companies/:code", function() {
+  test("Edits a company", async function() {
+    const editedCompany = {
+      code: 'test-company',
+      name: 'Edited Name',
+      description: 'Edited Description'
+    };
+    const response = await request(app).put(`/companies/${testCompany.code}`).send(editedCompany);
+    expect(response.statusCode).toEqual(200);
+    expect(response.body).toEqual({ company: editedCompany });
+  });
 
-//   test("Responds with 404 if can't find company", async function() {
-//     const response = await request(app).put(`/companies/0`);
-//     expect(response.statusCode).toEqual(404);
-//   });
-// });
+  test("Responds with 404 if can't find company", async function() {
+    const response = await request(app).put(`/companies/0`);
+    expect(response.statusCode).toEqual(404);
+  });
+});
 
 describe("DELETE /companies/:code", function() {
   test("Deletes a company", async function() {
